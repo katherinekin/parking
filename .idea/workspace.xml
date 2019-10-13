@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e853a2e-c479-4a1d-9ea4-488d28e4204d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/parking/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/parking/ParkingLot.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parking.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ParkingLot.java" afterDir="false" />
-    </list>
+    <list default="true" id="334a2927-e493-469f-9c05-8f174c66b7c2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,14 +15,7 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1RtLzBjTva03S5oS79aNyLNHspS" />
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
+  <component name="ProjectId" id="1S8L2tlcPjcj9sW1Jz6BIKCS3zB" />
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -65,23 +47,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2e853a2e-c479-4a1d-9ea4-488d28e4204d" name="Default Changelist" comment="" />
-      <created>1570481705228</created>
+      <changelist id="334a2927-e493-469f-9c05-8f174c66b7c2" name="Default Changelist" comment="" />
+      <created>1570940071918</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570481705228</updated>
+      <updated>1570940071918</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
