@@ -3,6 +3,8 @@ public class VehicleFactory {
         try {
             String[] carInfo = line.trim().split("\\s+");
             switch (carInfo[0].toLowerCase()) {
+                case "handicap":
+                    return new Handicap(carInfo[1], Integer.parseInt(carInfo[2]));
                 case "moped":
                     return new Moped(carInfo[1], Integer.parseInt(carInfo[2]));
                 case "truck":

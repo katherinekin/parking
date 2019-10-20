@@ -32,3 +32,10 @@ class Truck extends Vehicle {
         this.type = "truck";
     }
 }
+
+class Handicap extends Car {
+    Handicap(String license, int time) {
+        super(license, time);
+        this.type = "handicap";
+    }
+}
