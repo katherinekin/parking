@@ -15,7 +15,7 @@ public class Main {
         String filePath = String.valueOf(Paths.get(homePath + "input1.txt"));
         ParkingLot parkingLot = new ParkingLot();
         parkingLot.setVehicleList(filePath);
-
+        System.out.println(parkingLot.getTotalProfit());
 //        System.out.printf("Parking lot size is %d.", parkingLot.getCapacity());
     }
 }

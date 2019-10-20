@@ -13,6 +13,8 @@ public class ParkingLot {
     // If car arrives, check for open spots based on type
     private Map<Vehicle, Integer> takenSpaces = new HashMap<Vehicle, Integer>();
     private List<Vehicle> vehicleList = new ArrayList<Vehicle>();
+
+    private double dollarPerHour = 2.0;  // charge each car per hour
     private double totalProfit = 0.0;
 
     public LocalDateTime getCurrentTime () {
@@ -53,6 +55,13 @@ public class ParkingLot {
 
             lineNumber++;
         }
-        System.out.println(vehicleList.size());
+//        System.out.println(vehicleList.size());
+    }
+    public double getTotalProfit() {
+        for (int i = 0; i < vehicleList.size(); i++) {
+            // TODO: Need to add condition to check for parking lot capacity
+            totalProfit += dollarPerHour * vehicleList.get(i).getTime();
+        }
+        return totalProfit;
     }
 }

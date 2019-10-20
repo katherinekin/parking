@@ -3,10 +3,13 @@ import java.time.LocalDateTime;
 class Vehicle {
     protected String type;
     private String license;
-    private int time;
+    private int time = 0;
     Vehicle(String license, int time) {
         this.license = license;
         this.time = time;
+    }
+    public int getTime() {
+        return this.time;
     }
 }
 
