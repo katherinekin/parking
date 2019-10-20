@@ -1,14 +1,31 @@
 import java.time.LocalDateTime;
 
-abstract class Vehicle {
-    private String type;
+class Vehicle {
+    protected String type;
     private String license;
-    private String time;
+    private int time;
+    Vehicle(String license, int time) {
+        this.license = license;
+        this.time = time;
+    }
 }
 
 class Car extends Vehicle {
-
+    Car(String license, int time) {
+        super(license, time);
+        this.type = "car";
+    }
 }
-class Moped extends Vehicle {}
+class Moped extends Vehicle {
+    Moped(String license, int time) {
+        super(license, time);
+        this.type = "moped";
+    }
+}
 
-class Truck extends Vehicle {}
+class Truck extends Vehicle {
+    Truck(String license, int time) {
+        super(license, time);
+        this.type = "truck";
+    }
+}
