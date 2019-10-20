@@ -1,6 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 
 public class ParkingLot {
@@ -11,6 +12,7 @@ public class ParkingLot {
 
     // If car arrives, check for open spots based on type
     private Map<Vehicle, Integer> takenSpaces = new HashMap<Vehicle, Integer>();
+    private List<Vehicle> vehicleList = new ArrayList<Vehicle>();
     private double totalProfit = 0.0;
 
     public LocalDateTime getCurrentTime () {
@@ -28,5 +30,29 @@ public class ParkingLot {
     }
     public int getParkingSpace(Car car) {
         return takenSpaces.get(car);
+    }
+
+    public void setVehicleList(String filename) throws FileNotFoundException {
+
+        VehicleFactory factory = new VehicleFactory();
+        File file = new File(filename);
+        Scanner scanner = new Scanner(file);
+
+        int lineNumber = 0;
+
+        while(scanner.hasNextLine()){
+            String line = scanner.nextLine();
+
+            // Makes vehicle only if line is not blank
+            if(line.length() > 0) {
+                System.out.println("line " + lineNumber + ": " + line);
+                Vehicle myVehicle = factory.getVehicle(line);
+                System.out.println(myVehicle.getClass());
+                vehicleList.add(myVehicle);
+            }
+
+            lineNumber++;
+        }
+        System.out.println(vehicleList.size());
     }
 }
