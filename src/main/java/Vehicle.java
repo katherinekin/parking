@@ -12,6 +12,7 @@ class Vehicle {
         return this.time;
     }
     public String getType() { return this.type; }
+    public String getLicense() { return this.license; }
     public void displayVehicle() {
         System.out.printf("Type: %s, License %s, Hours %d", this.type, this.license, this.time);
     }

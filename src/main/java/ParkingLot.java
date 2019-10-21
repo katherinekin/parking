@@ -48,12 +48,13 @@ public class ParkingLot {
 
         while(scanner.hasNextLine()){
             String line = scanner.nextLine();
-
             // Makes vehicle only if line is not blank
             if(line.length() > 0) {
                 System.out.println("line " + lineNumber + ": " + line);
                 Vehicle myVehicle = factory.getVehicle(line);
-                vehicleList.add(myVehicle);
+                // check if vehicle is valid
+                if (myVehicle.getLicense().length() > 0)
+                    vehicleList.add(myVehicle);
 //                System.out.println(myVehicle.getClass());
             }
             lineNumber++;

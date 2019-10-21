@@ -14,7 +14,7 @@ public class VehicleFactory {
             }
         } catch (Exception e) {
             System.out.println("An invalid vehicle has entered the parking lot!");
-            e.printStackTrace();
+//            e.printStackTrace();
             return new Car("", 0);
         }
     }

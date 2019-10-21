@@ -36,7 +36,7 @@ public class Main {
         parkingLot.setVehicleList(filePath);
         System.out.printf("Total profit: %f\n\n", parkingLot.getTotalProfit());
 
-        // No vehicles, profit should be zero
+        // Invalid input, profit should be 0
         filePath = String.valueOf(Paths.get(homePath + "input5.txt"));
         parkingLot = new ParkingLot(2,2,2);
         parkingLot.setVehicleList(filePath);
