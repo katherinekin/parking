@@ -13,7 +13,7 @@ public class Main {
 
         //creating File instance to reference text file in Java
         String filePath = String.valueOf(Paths.get(homePath + "input1.txt"));
-        ParkingLot parkingLot = new ParkingLot();
+        ParkingLot parkingLot = new ParkingLot(2,2,2);
         parkingLot.setVehicleList(filePath);
         System.out.println(parkingLot.getTotalProfit());
 //        System.out.printf("Parking lot size is %d.", parkingLot.getCapacity());

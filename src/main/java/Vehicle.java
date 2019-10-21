@@ -11,6 +11,10 @@ class Vehicle {
     public int getTime() {
         return this.time;
     }
+    public String getType() { return this.type; }
+    public void displayVehicle() {
+        System.out.printf("Type: %s, License %s, Hours %d", this.type, this.license, this.time);
+    }
 }
 
 class Car extends Vehicle {
