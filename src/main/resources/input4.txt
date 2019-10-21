@@ -1,0 +1,7 @@
+car abc123 5
+truck def456 5
+car abc456 5
+moped abc159 5
+moped def159 5
+handicap abc789 5
+handicap def789 5

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="334a2927-e493-469f-9c05-8f174c66b7c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ParkingSpotContainerFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParkingLotSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParkingSpot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParkingSpotContainerFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/input1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/input1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Car.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Handicap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handicap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
@@ -15,6 +16,9 @@
       <change beforePath="$PROJECT_DIR$/target/classes/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ParkingLot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Truck.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/VehicleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/VehicleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/input1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestParking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestParking.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +76,9 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
