@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.time.LocalDateTime;
 import java.util.*;
 
 
@@ -11,13 +10,16 @@ public class ParkingLot {
     private ParkingSpotContainer mopedContainer;  // for mopeds only
     private ParkingSpotContainer otherContainer;    // for everyone else
 
+    // Gates
+    private int entryGate = 1;
+    private int exitGate = 1;
+
     // If car arrives, check for open spots based on type
     // Keeps track of all cars read from file
     private List<Vehicle> vehicleList = new ArrayList<Vehicle>();
 
     // When gate is true, the gate is unoccupied
-    private boolean entryGate = true;
-    private boolean exitGate = true;
+
     private double dollarPerHour = 1.0;  // charge each car per hour
     private double totalProfit = 0.0;
 
@@ -29,13 +31,11 @@ public class ParkingLot {
         this.totalCapacity = handicap + moped + other;
     }
 
-//    public LocalDateTime getCurrentTime () {
-//        return LocalDateTime.now();
-//    }
-
-
     public int getCapacity() {
         return this.totalCapacity;
+    }
+    public void setRate(double rate) {
+        this.dollarPerHour = rate;
     }
 
     public void setVehicleList(String filename) throws FileNotFoundException {
@@ -87,8 +87,9 @@ public class ParkingLot {
         }
     }
 
-    public void updateCapacity() {
-//        int handicap = this.
+    // Check if entryGate is unoccupied
+    public int getTotalFreeSpace() {
+        return handicapContainer.getFreeSpace() + mopedContainer.getFreeSpace() + otherContainer.getFreeSpace();
     }
 
     public double getTotalProfit() {
