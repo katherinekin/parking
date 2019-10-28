@@ -26,4 +26,6 @@ public class ParkingSpotContainer {
     public int getFreeSpace() {
         return this.length - this.index;
     }
+
+    public int getOccupiedSpace() { return this.index; }
 }

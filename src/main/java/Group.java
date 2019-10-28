@@ -12,18 +12,23 @@ public class Group {
         this.parkingLot = new ParkingLot(handicap, moped, other);
         this.parkingLot.setRate(price);
     }
+
     public void setPrice(double price) {
         this.price = price;
     }
+
     public void setDiscount(double discount) {
         this.discount = discount;
     }
+
     public double getPrice() {
         return this.price;
     }
+
     public double getDiscount() {
         return this.discount;
     }
+
     public void displayParkingLot() {
         System.out.printf("Group: %s\n", this.name);
         parkingLot.displayParkingLot();

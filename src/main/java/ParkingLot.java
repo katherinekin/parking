@@ -31,9 +31,6 @@ public class ParkingLot {
         this.totalCapacity = handicap + moped + other;
     }
 
-    public int getCapacity() {
-        return this.totalCapacity;
-    }
     public void setRate(double rate) {
         this.dollarPerHour = rate;
     }
@@ -118,9 +115,7 @@ public class ParkingLot {
     }
 
     public double getTotalProfit() {
-        // Park vehicles first
-        parkVehicle();
-        // Set container for all parkingSpotContainers to iterate through
+
         List<ParkingSpotContainer> parkingLot = List.of(
                 this.handicapContainer,
                 this.mopedContainer,
@@ -138,8 +133,9 @@ public class ParkingLot {
 
     public void displayParkingLot() {
         System.out.println("Parking lot occupancy:");
-        System.out.printf("handicapCapacity: %d out of %d\n", this.handicapContainer.getFreeSpace(), this.handicapContainer.length);
-        System.out.printf("mopedCapacity: %d out of %d\n", this.mopedContainer.getFreeSpace(), this.mopedContainer.length);
-        System.out.printf("otherCapacity: %d out of %d\n", this.otherContainer.getFreeSpace(), this.otherContainer.length);
+        System.out.printf("handicap occupied: %d out of %d\n", this.handicapContainer.getOccupiedSpace(), this.handicapContainer.length);
+        System.out.printf("moped occupied: %d out of %d\n", this.mopedContainer.getOccupiedSpace(), this.mopedContainer.length);
+        System.out.printf("other occupied: %d out of %d\n", this.otherContainer.getOccupiedSpace(), this.otherContainer.length);
+        System.out.printf("total profit for %f dollars per hour: %f\n", this.dollarPerHour, this.getTotalProfit());
     }
 }

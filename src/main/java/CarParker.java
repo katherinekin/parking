@@ -15,6 +15,8 @@ public class CarParker {
         File file = new File(filename);
         Scanner scanner = new Scanner(file);
 
+        vehicleList = new ArrayList<Vehicle>();
+
         int lineNumber = 0;
 
         while(scanner.hasNextLine()){
@@ -36,10 +38,7 @@ public class CarParker {
     }
     // First check price, then check capacity (assume car can check type of parkingspot), then try to park the car
     public void parkAllVehicles() {
-        Collections.sort(this.groupList, Comparator.comparingDouble(Group::getPrice));
-        for (int j = 0; j < groupList.size(); j++) {
-            System.out.println(groupList.get(j).name);
-        }
+        Collections.sort(this.groupList, Comparator.comparingDouble(Group::getPrice));  // Sort list in ascending order
 
         Vehicle currVehicle;
 
@@ -55,8 +54,8 @@ public class CarParker {
     }
 
     public void displayParkingLots() {
-        for (int i = 0; i < groupList.size(); i++) {
-            groupList.get(i).displayParkingLot();
+        for (Group group : groupList) {
+            group.displayParkingLot();
         }
     }
 }
