@@ -35,54 +35,6 @@ public class ParkingLot {
         this.dollarPerHour = rate;
     }
 
-    public void setVehicleList(String filename) throws FileNotFoundException {
-
-        VehicleFactory factory = new VehicleFactory();
-        File file = new File(filename);
-        Scanner scanner = new Scanner(file);
-
-        int lineNumber = 0;
-
-        while(scanner.hasNextLine()){
-            String line = scanner.nextLine();
-            // Makes vehicle only if line is not blank
-            if(line.length() > 0) {
-                System.out.println("line " + lineNumber + ": " + line);
-                Vehicle myVehicle = factory.getVehicle(line);
-                // check if vehicle is valid
-                if (myVehicle.getLicense().length() > 0)
-                    vehicleList.add(myVehicle);
-//                System.out.println(myVehicle.getClass());
-            }
-            lineNumber++;
-        }
-    }
-
-    // Check for empty lots
-    public void parkVehicle() {
-        Vehicle currVehicle;
-        for (int i = 0; i < vehicleList.size(); i++) {
-            currVehicle = vehicleList.get(i);
-            if (this.totalCapacity > 0) {
-                if (currVehicle.getType().equals("handicap")
-                        && this.handicapContainer.getIndex() < this.handicapContainer.length) {
-                    this.handicapContainer.park(currVehicle);
-                    this.totalCapacity--;
-                }
-                else if (currVehicle.getType().equals("moped")
-                        && this.mopedContainer.getIndex() < this.mopedContainer.length) {
-                    this.mopedContainer.park(currVehicle);
-                    this.totalCapacity--;
-                }
-                else {
-                    if (this.otherContainer.getFreeSpace() > 0) {
-                        this.otherContainer.park(currVehicle);
-                        this.totalCapacity--;
-                    }
-                }
-            }
-        }
-    }
     public boolean parkVehicle(Vehicle currVehicle) {
 
         if (this.totalCapacity > 0) {
