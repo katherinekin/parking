@@ -1,14 +1,13 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class CarParker {
 
     // Keeps track of all cars read from file
     private List<Vehicle> vehicleList = new ArrayList<Vehicle>();
-    private List<Group> groupList = new ArrayList<Group>();
+    public List<Group> groupList = new ArrayList<Group>();
+
 
     public void setVehicleList(String filename) throws FileNotFoundException {
 
@@ -27,18 +26,37 @@ public class CarParker {
                 // check if vehicle is valid
                 if (myVehicle.getLicense().length() > 0)
                     vehicleList.add(myVehicle);
-//                System.out.println(myVehicle.getClass());
             }
             lineNumber++;
         }
     }
-    public void createGroup(String name, int handicap, int moped, int other) {
-        Group newGroup = new Group(name, handicap, moped, other);
+    public void createGroup(String name, double price, int handicap, int moped, int other) {
+        Group newGroup = new Group(name, price, handicap, moped, other);
         groupList.add(newGroup);
     }
     // First check price, then check capacity (assume car can check type of parkingspot), then try to park the car
     public void parkAllVehicles() {
-        
+        Collections.sort(this.groupList, Comparator.comparingDouble(Group::getPrice));
+        for (int j = 0; j < groupList.size(); j++) {
+            System.out.println(groupList.get(j).name);
+        }
+
+        Vehicle currVehicle;
+
+        for (int i = 0; i < vehicleList.size(); i++) {
+            currVehicle = vehicleList.get(i);
+            for (int j = 0; j < groupList.size(); j++) {
+                Group currGroup = groupList.get(j);
+                if (currGroup.parkingLot.getTotalFreeSpace() > 0)
+                    if (currGroup.parkingLot.parkVehicle(currVehicle)) // tries to park vehicle, if successful break
+                        break;
+            }
+        }
     }
 
+    public void displayParkingLots() {
+        for (int i = 0; i < groupList.size(); i++) {
+            groupList.get(i).displayParkingLot();
+        }
+    }
 }

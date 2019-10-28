@@ -16,10 +16,16 @@ public class Main {
         String filePath = String.valueOf(Paths.get(homePath + "input1.txt"));
         CarParker carParker = new CarParker();
         carParker.setVehicleList(filePath);
+        carParker.createGroup("GroupA", 1.0, 2,2,2); // creates one group
+        carParker.createGroup("GroupB", 3.0, 2,2,2); // creates one group
+        carParker.createGroup("GroupC", 2.0, 2,2,2); // creates one group
+        carParker.parkAllVehicles();
+        carParker.displayParkingLots();
 
-        ParkingLot parkingLot = new ParkingLot(2,2,2);
-        parkingLot.setVehicleList(filePath);
-        System.out.printf("Total profit: %f\n\n", parkingLot.getTotalProfit());
+
+//        ParkingLot parkingLot = new ParkingLot(2,2,2);
+//        parkingLot.setVehicleList(filePath);
+//        System.out.printf("Total profit: %f\n\n", parkingLot.getTotalProfit());
 
 //        // All cars should be able to park
 //        filePath = String.valueOf(Paths.get(homePath + "input2.txt"));

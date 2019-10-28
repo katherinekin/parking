@@ -86,6 +86,31 @@ public class ParkingLot {
             }
         }
     }
+    public boolean parkVehicle(Vehicle currVehicle) {
+
+        if (this.totalCapacity > 0) {
+            if (currVehicle.getType().equals("handicap")
+                    && this.handicapContainer.getIndex() < this.handicapContainer.length) {
+                this.handicapContainer.park(currVehicle);
+                this.totalCapacity--;
+                return true;
+            }
+            else if (currVehicle.getType().equals("moped")
+                    && this.mopedContainer.getIndex() < this.mopedContainer.length) {
+                this.mopedContainer.park(currVehicle);
+                this.totalCapacity--;
+                return true;
+            }
+            else {
+                if (this.otherContainer.getFreeSpace() > 0) {
+                    this.otherContainer.park(currVehicle);
+                    this.totalCapacity--;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     // Check if entryGate is unoccupied
     public int getTotalFreeSpace() {
@@ -107,10 +132,14 @@ public class ParkingLot {
                     totalProfit += dollarPerHour * parkingSpotContainer.get(j).getTime();
             }
         }
-        System.out.printf("handicapCapacity: %d\n", this.handicapContainer.getFreeSpace());
-        System.out.printf("mopedCapacity: %d\n", this.mopedContainer.getFreeSpace());
-        System.out.printf("otherCapacity: %d\n", this.otherContainer.getFreeSpace());
 
         return totalProfit;
+    }
+
+    public void displayParkingLot() {
+        System.out.println("Parking lot occupancy:");
+        System.out.printf("handicapCapacity: %d out of %d\n", this.handicapContainer.getFreeSpace(), this.handicapContainer.length);
+        System.out.printf("mopedCapacity: %d out of %d\n", this.mopedContainer.getFreeSpace(), this.mopedContainer.length);
+        System.out.printf("otherCapacity: %d out of %d\n", this.otherContainer.getFreeSpace(), this.otherContainer.length);
     }
 }
